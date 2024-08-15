@@ -1,0 +1,19 @@
+#header {
+    background-color: blue;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+#sidebar {
+    background-color: brown;
+    width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#container {
+display: flex;
+position: relative;
+flex: 1;
+}

@@ -3,11 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sheet.css"/>
     <title>E-Commerce Website</title>
+    <style>
+        #header {
+            background-color: blue;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+        #sidebar {
+            background-color: brown;
+            width: 300px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #container {
+        display: flex;
+        position: relative;
+        flex: 1;
+        }
+    </style>
 </head>
 <body>
-    <p>my name is mehnoor imran from karachi.</p>
-    <p>mehnoor imran</p>
+   <div id='header'>
+    <h1>HEADER</h1>
+   </div>
+   <div id='container'>
+    <div id="sidebar">
+        <h1>SIDEBAR</h1>
+    </div>
+   </div>
     
 </body>
 </html>

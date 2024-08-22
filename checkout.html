@@ -4,40 +4,85 @@
         <title> First Class Html</title>
         <link rel='icon' type='image/png' href='simple-twitter-16x16-icon-png-7.png'/>
         <link rel='stylesheet' href='style.css' />
-        <style>
-            .discount-price {
-                text-decoration: line-through;
-                color: red;
+        <script src="ecommerce web/tailwindcss.js"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend:{
+                        color:{
+                            'blue': {
+                             DEFAULT: '#6B82C2',
+                             50: '#FDFDFE',
+                             100: '#EDF0F8',
+                             200: '#CCD4EA',
+                             300: '#ACB9DD',
+                             400: '#8B9DD0',
+                             500: '#6B82C2',
+                             600: '#4E6AB7',
+                             700: '#40589C', 
+                             800: '#34487F',
+                             900: '#283762',
+                             950: '#222F53'
+                             }, 
+                             'purple': {
+                               DEFAULT: '#4B0CD9',
+                                50: '#E9E4FE',
+                                100: '#D4CAFC',
+                                 200: '#AC95F9',
+                                 300: '#8660F6',
+                                 400: '#632AF3',
+                                 500: '#4B0CD9',
+                                 600: '#3B099F',
+                                 700: '#280665',
+                                 800: '#12022B',
+                                 900: '#000000',
+                                 950: '#000000'
+                                },
+                                'white': {
+                            DEFAULT: '#E8E8E8',
+                            50: '#FFFFFF',
+                            100: '#FCFCFC',
+                            200: '#F7F7F7',
+                            300: '#F2F2F2',
+                            400: '#EDEDED',
+                            500: '#E8E8E8',
+                            600: '#CCCCCC',
+                            700: '#B0B0B0',
+                            800: '#949494',
+                            900: '#787878',
+                            950: '#6A6A6A'
+                        },
+                        'black': {
+                            DEFAULT: '#0F0F0F',
+                            50: '#6B6B6B',
+                            100: '#616161',
+                            200: '#4D4D4D',
+                            300: '#383838',
+                            400: '#242424',
+                            500: '#0F0F0F',
+                            600: '#0A0A0A',
+                            700: '#050505',
+                            800: '#000000',
+                            900: '#000000',
+                            950: '#000000'
+                        },
+                        }
+                    }
+                }
             }
-            .actual-price {
-                color: green;
-            }
-
-            .paymentLabel {
-                display: flex;
-                align-items: center;
-            }
-            .total-amount {
-            padding: 10px;
-            background-color: white;
-            border-top: 1px solid #ccc;
-            color: black;
-        }
- 
-
-        </style>
+        </script>
     </head>
 
-    <body>
-        <div id='header' class='slidedown'>
-            <h1>Header</h1>
+    <body class="bg-purple-50 flex flex-col text-black-900 h-svh">
+        <div  class="bg-purple-300 p-8">
+            <h1 class="text-white-800 text-6xl">Header</h1>
         </div>
-        <div id='container'>
-          <div id='sidebar'>
-            <h1>Sidebar</h1>
+        <div id='container' class="flex grow flex-column">
+          <div  class="w-72 box-border p-8 bg-purple-200">
+            <h1  class="text-black-950 text-2xl">Sidebar</h1>
         </div>
-        <div id='mainBox' style='display:flex ; width:100% ; gap:10px'>
-            <div class='grid-item slideDown' style='width:30%;'>
+        <div id='mainBox' class="flex w-full gap-4">
+            <div class='bg-purple-100 text-black-500 p-4 rounded-md shadow-2xl slideDown' style='width: 30%;'>
                 <form id='ecommerceForm' onsubmit='event.preventDefault();' style='display:flex ;flex-direction:column; gap:4px;'>
                     <label>Checkout Form</label>
                     <input type='text' name='first_name' required id='first_name' placeholder="Enter your first_name"/>
@@ -65,16 +110,16 @@
                     </select>
                     <span style='color:red;' hidden id ='tasErrorField-country'>This field is required</span>
                     <div>
-                        <label class="paymentLabel">
+                        <label class="flex gap-2 blue-700">
                           <input type="radio" name='task' required id ='payment_method' checked placeholder="Enter your payment_method"/>
                            Cash On Delivery
                         </label>
-                        <label class="paymentLabel">
+                        <label class="flex gap-2 ">
                             <input type="radio" name='task' required id ='payment_method' placeholder="Enter your payment_method"/>
                             Online Payment
                             </label>
                         </div>
-                        <button type='button' onclick="submitCheckout()" id='submitBtn' class='submitBtn' style='background-color: #B3A492; color: white; padding: 10px; border:none; border-radius: 5px;'>Checkout</button>
+                        <button type='button' onclick="submitCheckout()" id='submitBtn'class='bg-blue-500 text-white-200 p-2 border-0 hover:bg-blue-600 active:bg-blue-600 rounded-md' >Checkout</button>
                 </form>
                 <div>
                     <label>Cart Details</label>
@@ -83,7 +128,7 @@
                     </div>
                 </div>
          </div>
-                <div id='main'>
+                <div id='main' class="p-4 grid grow border-box grid-cols-2 gap-4">
 
             </div>
         </div>
@@ -301,15 +346,15 @@
 
 
         checkoutForm.cart_details.forEach((x) => {
-            var priceBox = x.discounted_price < x.price ? `<div class='actual-price'>
-                    <span class='discount-price'> `+x.price+`</span>
+            var priceBox = x.discounted_price < x.price ? `<div class='text-blue-600'>
+                    <span class='text-blue-800 line-through'> `+x.price+`</span>
                     `+x.discounted_price+`
-                </div>` : `<div class='actual-price'>
+                </div>` : `<div class='text-blue-600'>
                     `+x.price+`
                 </div>` ;
 
 
-                 cartHtml += `<div class="box" style="background-color:#B6C7AA;">
+                 cartHtml += `<div class="box bg-purple-200 font-medium text-black-950">
                     <div style="padding-left:10px; border-radius: 50%; padding-right:10px; display:flex; justify-content:space-between; align-items:centre;">
                         <p>`+ x.name +`</p>
                         `+ priceBox +`
@@ -317,7 +362,7 @@
                             Quantity `+ x.quantity +`
                             </div>
                             <div>
-                                <button onclick="removeItemCart(`+ x.id +`)">
+                                <button  class="text-purple-500" onclick="removeItemCart(`+ x.id +`)">
                                     X
                                     </button>
                                 </div>
@@ -337,21 +382,21 @@
 
 
        products.forEach((x) => {
-       var priceBox = x.discounted_price < x.price ? `<div class = 'actual-price'>
-        <span class='discount-price'> `+x.price+ `</span>
+       var priceBox = x.discounted_price < x.price ? `<div class = 'text-blue-600'>
+        <span class='text-blue-800 line-through'> `+x.price+ `</span>
         `+x.discounted_price+`
-        </div>` : `<div class='actual-price'>
+        </div>` : `<div class='text-blue-600'>
             `+x.price+`
             </div>` ;
        
 
-        productHtml += `<div class='grid-item slideDown'>
-            <h1>` + x.name + `</h1>
+        productHtml += `<div class='bg-white-500 text-black-500 p-4 rounded-md shadow-2xl slideDown'>
+            <h1  class='font-bold'>` + x.name + `</h1>
             <p>` + x.description + `</p>
             `+ priceBox +`
             <div class='addToCartBox'>
                 <input type='number' id='qty` + x.id +`'/>
-                <button onclick='addToCart(`+x.id+`)'>Add to Cart</button>
+                <button class='bg-blue-500 text-white-200 font-medium rounded-lg w-32 py-1' onclick='addToCart(`+x.id+`)'>Add to Cart</button>
 
                 </div>
           </div>`;

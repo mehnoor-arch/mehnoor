@@ -7,37 +7,29 @@
     margin: 0;
   }
 
-  body {
-    color: black;
-    font-weight: 900;
-    margin: 0;
-    background-color: ffd9;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
+ 
 
-  #header {
+ /* #header {
     background: #A0937D;
     height: 80px;
     display: flex;
     align-items: center;
     padding: 0 20px;
     animation: 1s ease-out 0s 1 slideInFromUp;
-  }
+  }*/
 
-  #container {
+  /*#container {
     display: flex;
     position: relative;
     flex: 1;
   }
 
-  #sidebar {
+ /* #sidebar {
     background: #E7D4B5;
     width: 300px;
     padding: 20px;
     box-sizing: border-box;
-  }
+  }*/
 
   #main {
     flex: 1;

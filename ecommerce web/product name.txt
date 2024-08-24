@@ -1,0 +1,28 @@
+product name
+id
+discription
+size
+quantity
+quality
+color
+price
+
+cart
+product
+quantity
+add items
+price
+
+checkout
+email
+address
+phone.no
+postal_code
+first_name
+last_name
+total price
+city
+country
+id
+
+

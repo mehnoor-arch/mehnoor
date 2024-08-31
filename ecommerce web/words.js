@@ -40,8 +40,8 @@ const words = [
         hint : "A person who writes and maintains the source code of software applications"
     },
     {
-        word : "programming",
-        hint : "The process of writing and testing code to create software applications"
+        word : "debugger",
+        hint : "A tool used to recheck your code"
     },
     {
         word : "string",

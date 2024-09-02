@@ -47,8 +47,34 @@ const words = [
         word : "string",
         hint : " A communication protocol used for sending data over the internet , also commonly known as a get or post request"
     },
+   
     {
-        word : "statement",
-        hint : " A declaration of something"
+        word : "Topology",
+        hint : " The arrangement of elements in a computer network"
+    },
+    {
+        word : "Protocol",
+        hint : " A set of rules governing data exchange over a network"
+    },
+    {
+        word : "Sandbox",
+        hint : " An isolated environment for testing or running untrusted programs"
+    },
+    {
+        word : "Repository",
+        hint : " A central location for storing and managing software code"
+    },
+   
+    {
+        word : "Cache",
+        hint : "A small, fast storage area for frequently accessed data"
+    },
+    {
+        word : "Queue",
+        hint : "A data structure that follows the First In, First Out (FIFO) principle"
+    },
+    {
+        word : "Hashing",
+        hint : " The process of converting data into a fixed-size string of characters"
     },
 ]

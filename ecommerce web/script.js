@@ -3,6 +3,9 @@ const hintText = document.querySelector(".hint span");
 const inputField = document.querySelector("input");
 const refreshBtn = document.querySelector(".refresh-word");
 const checkBtn = document.querySelector(".check-word");
+const msgContainer = document.querySelector(".msg-container");
+const msg = document.querySelector("#msg");
+const  newBtn = document.querySelector("#new-btn");
 
 let correctWord;
 
@@ -37,6 +40,6 @@ const checkWord = () => {
 };
 
 refreshBtn.addEventListener("click", initGame);
-checkBtn.addEventListener("click", checkWord);
+checkBtn.addEventListener("click", checkWord)
 
 initGame();

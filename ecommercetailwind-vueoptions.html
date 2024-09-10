@@ -103,13 +103,13 @@
 <body id="app" class="bg-purple-50 flex flex-col text-black-900 h-svh">
     <div class="bg-purple-300 p-8">
         <h1 class="text-great-blue-100 text-6xl">{{message}}</h1>
-        <button @click = "changesMsg">click here</button>
+        <button @click = "changesMsg">click here </button>
     </div>
    
     <div id='container' class="flex grow flex-column">
         <div class="w-72 box-border p-8 bg-purple-200">
-            <h1 class="text-great-blue-100 text-2xl">{{message}}</h1>
-            <button @click = "changesMsg">click here</button>
+            <h1 class="text-great-blue-100 text-2xl">Sidebar</h1>
+           
         </div>
         <div id='mainBox' class="flex w-full gap-4">
             <div class='bg-purple-100 text-black-900 p-4 rounded-md shadow-2xl slideDown' style='width: 30%;'>
@@ -170,25 +170,50 @@
         </div>
 </body>
 <script>
+     
+
+
+
+     
     debugger;
-
-
-
-    const { createApp, ref } = Vue
+    const { createApp } = Vue
 
     createApp({
-        setup() {
-
-            const message = ref('Hello vue!')
-            const changesMsg = () => {
-              message.value = "hehheheheh I am Change"
-
-            }     
-             return {
-                message,
-                changesMsg
-            }
+      data() {
+        return {
+          message: 'Hello Vue!'
         }
+      },
+      beforeCreate() {
+        debugger;
+        alert("we here before html appears");
+      },
+      created() {
+        alert("we here when html created or in a process of rendering");
+      },
+      beforeMount() {
+        let docCountry = document.getElementById('country');
+        console.log("************** before mount **********");
+        console.log(docCountry);
+      },
+      mounted() {
+        let docCountry = document.getElementById('country');
+        console.log(docCountry);
+      },
+      beforeUpdate() {
+        alert("i am here because message being updated");
+      },
+      updated() {
+        alert("i am here because message is updated now");
+        console.log("********* let see message is updated now **************");
+        console.log(this.message);
+        this.message = "we are in infinite loop";
+      },
+      methods: {
+        changesMsg (){
+            this.message = "I am change now";
+        }
+      }
     }).mount('#app')
 
     var initialCheckoutForm = {

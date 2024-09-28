@@ -1,30 +1,30 @@
 <html>
-
-<head>
-    <title> First Class Html</title>
-    <link rel='icon' type='image/png' href='simple-twitter-16x16-icon-png-7.png' />
-    <script src="ecommerce web/tailwindcss.js"></script>
+  <head>
+    <title>Class work | Home Work | test server change</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="tailwindcss.js"></script>
     <script src="vue.js"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'blue': {
-                            DEFAULT: '#6B82C2',
-                            50: '#FDFDFE',
-                            100: '#EDF0F8',
-                            200: '#CCD4EA',
-                            300: '#ACB9DD',
-                            400: '#8B9DD0',
-                            500: '#6B82C2',
-                            600: '#4E6AB7',
-                            700: '#40589C',
-                            800: '#34487F',
-                            900: '#283762',
-                            950: '#222F53'
-                        },
-                        red: {
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blue: {
+                DEFAULT: "#353887",
+                50: "#9C9ED8",
+                100: "#8D90D2",
+                200: "#7073C7",
+                300: "#5256BB",
+                400: "#4144A4",
+                500: "#353887",
+                600: "#25275F",
+                700: "#151736",
+                800: "#06060E",
+                900: "#000000",
+                950: "#000000",
+              },
+              red: {
                 DEFAULT: "#CF2E39",
                 50: "#FEFBFB",
                 100: "#F9E4E6",
@@ -38,96 +38,69 @@
                 900: "#390D10",
                 950: "#26080A",
               },
-                        'purple': {
-                            DEFAULT: '#4B0CD9',
-                            50: '#E9E4FE',
-                            100: '#D4CAFC',
-                            200: '#AC95F9',
-                            300: '#8660F6',
-                            400: '#632AF3',
-                            500: '#4B0CD9',
-                            600: '#3B099F',
-                            700: '#280665',
-                            800: '#12022B',
-                            900: '#000000',
-                            950: '#000000'
-                        },
-                        'black': {
-                            DEFAULT: '#0F0F0F',
-                            50: '#6B6B6B',
-                            100: '#616161',
-                            200: '#4D4D4D',
-                            300: '#383838',
-                            400: '#242424',
-                            500: '#0F0F0F',
-                            600: '#0A0A0A',
-                            700: '#050505',
-                            800: '#000000',
-                            900: '#000000',
-                            950: '#000000'
-                        },
-                        'great-blue': {
-                            DEFAULT: '#2A669F',
-                            50: '#FFFFFF',
-                            100: '#FFFFFF',
-                            200: '#FDFEFE',
-                            300: '#ACE0E9',
-                            400: '#5BAED4',
-                            500: '#2A669F',
-                            600: '#2A539F',
-                            700: '#2A409F',
-                            800: '#2A2C9F',
-                            900: '#3C2A9F'
-                        },
-                        'flamingo': {
-                            DEFAULT: '#EF4444',
-                            50: '#FDEDED',
-                            100: '#FCDADA',
-                            200: '#F9B5B5',
-                            300: '#F58F8F',
-                            400: '#F26A6A',
-                            500: '#EF4444',
-                            600: '#E71414',
-                            700: '#B30F0F',
-                            800: '#800B0B',
-                            900: '#4C0707',
-                            950: '#320404'
-                        },
-                        'mountain-meadow': {
-                            DEFAULT: '#10B981',
-                            50: '#8CF5D2',
-                            100: '#79F3CB',
-                            200: '#53F0BC',
-                            300: '#2EEDAE',
-                            400: '#13DF9B',
-                            500: '#10B981',
-                            600: '#0C855D',
-                            700: '#075239',
-                            800: '#031E15',
-                            900: '#000000',
-                            950: '#000000'
-                        },
-                    }
-                }
-            }
-        }
+              white: {
+                DEFAULT: "#E8E8E8",
+                50: "#FFFFFF",
+                100: "#FCFCFC",
+                200: "#F7F7F7",
+                300: "#F2F2F2",
+                400: "#EDEDED",
+                500: "#E8E8E8",
+                600: "#CCCCCC",
+                700: "#B0B0B0",
+                800: "#949494",
+                900: "#787878",
+                950: "#6A6A6A",
+              },
+              black: {
+                DEFAULT: "#0F0F0F",
+                50: "#6B6B6B",
+                100: "#616161",
+                200: "#4D4D4D",
+                300: "#383838",
+                400: "#242424",
+                500: "#0F0F0F",
+                600: "#0A0A0A",
+                700: "#050505",
+                800: "#000000",
+                900: "#000000",
+                950: "#000000",
+              },
+              seaGreen: {
+                DEFAULT: "#31A24C",
+                50: "#A6E4B5",
+                100: "#97DFA8",
+                200: "#77D68E",
+                300: "#58CD74",
+                400: "#3AC15B",
+                500: "#31A24C",
+                600: "#247738",
+                700: "#174C24",
+                800: "#0A210F",
+                900: "#000000",
+                950: "#000000",
+              },
+            },
+          },
+        },
+      };
     </script>
-</head>
-
-<body id="app" class="bg-purple-50 flex flex-col text-black-900 h-svh">
-    <div class="bg-purple-300 p-8">
-        <h1 class="text-great-blue-100 text-6xl">{{message}}</h1>
-        <button @click = "changesMsg">change me </button>
+ uu
+  <body id="app" class="bg-white-50 flex flex-col text-blue-900 h-svh">
+    <div class="bg-red-50 p-8">
+      <h1 class="text-blue-500 text-6xl">{{ message }}</h1>
+      <button @click="changesMsg">Change me</button>
     </div>
-   
-    <div id='container' class="flex grow flex-column">
-        <div class="w-72 box-border p-8 bg-purple-200">
-            <h1 class="text-great-blue-100 text-2xl">Sidebar</h1>
-           
-        </div>
-        <div id='mainBox' class="flex w-full gap-4">
-            <div class='bg-purple-100 text-black-900 p-4 rounded-md shadow-2xl slideDown' style='width: 30%;'>
-                <form
+    <div id="container" class="flex grow flex-column">
+      <div class="w-72 box-border p-8 bg-red-100">
+        <h1 class="text-blue-400 text-2xl">Sidebar</h1>
+      </div>
+      <div id="mainBox" class="flex w-full gap-4">
+        <div
+          class="bg-white-500 text-black-500 p-4 rounded-md shadow-2xl slideDown"
+          style="width: 30%"
+        >
+          <form
             id="ecommerceForm"
             onsubmit="event.preventDefault();"
             style="display: flex; flex-direction: column; gap: 4px"
@@ -218,11 +191,8 @@
               >This field is required</span
             >
             <div>
-                
-                   
-                    <div>
-                        <label class="flex gap-2 blue-700">
-                            <input
+              <label class="flex gap-2 blue-700">
+                <input
                   type="radio"
                   name="task"
                   v-model="checkoutForm.payment_method"
@@ -233,8 +203,8 @@
                 />
                 Cash on Delivery
               </label>
-                        <label class="flex gap-2 ">
-                            <input
+              <label class="flex gap-2">
+                <input
                   type="radio"
                   v-model="checkoutForm.payment_method"
                   name="task"
@@ -244,16 +214,19 @@
                 />
                 Online Payment
               </label>
-                    </div>
-                    <button
+            </div>
+            <button
               type="button"
               @click="sumbitCheckout()"
               id="submitBtn"
-                        class='bg-blue-500 text-great-blue-100 p-2 border-0 hover:bg-blue-600 active:bg-blue-600 rounded-md'>Checkout</button>
-                </form>
-                <div>
-                    <label>Cart Details</label>
-                    <div
+              class="bg-blue-600 text-white-200 p-2 border-0 hover:bg-blue-700 active:bg-blue-700 rounded-md"
+            >
+              Checkout
+            </button>
+          </form>
+          <div>
+            <label>Cart Details</label>
+            <div
               id="boxList"
               style="
                 width: 80%;
@@ -261,31 +234,31 @@
                 flex-direction: column;
                 gap: 4px;
               "
-                        class="grid-item slideDown">
-
-                        <div class="box bg-red-50 font-medium text-blue-900">
-                            <div
-                              style="
-                                padding-left: 10px;
-                                border-radius: 50%;
-                                padding-right: 10px;
-                                display: flex;
-                                justify-content: space-between;
-                                align-items: center;
-                              "
-                              v-for="(x, index) in checkoutForm.cart_details"
-                            >
-                              <p>{{ x.name}}</p>
-                              <div
-                              class="text-purple-900"
+              class="grid-item slideDown"
+            >
+            <div class="box bg-red-50 font-medium text-blue-900">
+              <div
+                style="
+                  padding-left: 10px;
+                  border-radius: 50%;
+                  padding-right: 10px;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+                v-for="(x, index) in checkoutForm.cart_details"
+              >
+                <p>{{ x.name}}</p>
+                <div
+                  class="text-seaGreen-500"
                   v-if="x.discounted_price < x.price"
                 >
-                <span class="text-red-600 line-through" :data-id="x.id"></span>
+                  <span class="text-red-600 line-through" :data-id="x.id">
                     {{x.price}}
                   </span>
                   {{x.discounted_price}}
                 </div>
-                <div class="text-purple-900" v-else>{{x.price}}</div>
+                <div class="text-seaGreen-500" v-else>{{x.price}}</div>
                 <div>{{'Quantity '+ x.quantity }}</div>
                 <div>
                   <button class="text-red-500" @click="removeItemCart(x.id)">
@@ -297,54 +270,40 @@
             </div>
           </div>
         </div>
-                    </div>
-                </div>
+        <div id="main" class="p-4 grid grow border-box grid-cols-2 gap-4">
+          <div
+            class="bg-white-500 text-black-500 p-4 rounded-md shadow-2xl slideDown"
+            v-for="(x, index) in products"
+          >
+            <h1 class="font-bold">{{ x.name }}</h1>
+            <p class="font-medium">{{ x.description }}</p>
+
+            <div class="text-seaGreen-500" v-if="x.discounted_price < x.price">
+              <span class="text-red-600 line-through">{{ x.price }}</span>
+              {{ x.discounted_price }}
             </div>
-            <div id='main' class="p-4 grid grow border-box grid-cols-2 gap-4">
-
-                <div id="main" class="p-4 grid grow border-box grid-cols-2 gap-4">
-                    <div
-                      class="bg-purple-500 text-black-500 p-4 rounded-md shadow-2xl slideDown"
-                      v-for="(x, index) in products"
-                    >
-                      <h1 class="font-bold">{{ x.name }}</h1>
-                      <p class="font-medium">{{ x.description }}</p>
-          
-                      <div class="text-purple-900" v-if="x.discounted_price < x.price">
-                        <span class="text-red-600 line-through">{{ x.price }}</span>
-                        {{ x.discounted_price }}
-                      </div>
-                      <div class="text-purple-900" v-else>{{ x.price }}</div>
-                      <div class="">
-                        <input type="number" :id='"qty"+ x.id' />
-                        <button
-                          class="bg-blue-400 text-black-200 font-medium rounded-lg w-32 py-1"
-                          @click="addToCart(x.id)"
-                        >
-                          Add to Cart
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-           
-        
-</body>
-<script>
-
-
-
-
-    const { createApp, ref, onMounted, dateFormat, computed } = Vue;
+            <div class="text-seaGreen-500" v-else>{{ x.price }}</div>
+            <div class="">
+              <input type="number" :id='"qty"+ x.id' />
+              <button
+                class="bg-blue-400 text-white-200 font-medium rounded-lg w-32 py-1"
+                @click="addToCart(x.id)"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const { createApp, ref, onMounted, dateFormat, computed  } = Vue;
 
     createApp({
-        setup() {
-
-            const message = ref("Hello Vue")
-            const initialCheckoutForm = {
+      setup() {
+        const message = ref("Hello vue!");
+        const initialCheckoutForm = {
           first_name: "",
           last_name: "",
           phone_number: 0,
@@ -387,52 +346,49 @@
           cart_details: [],
         });
         const products = [
-        {
+          {
             id: 1,
-            name: 'water bottle',
-            description: 'color:blue size: large',
+            name: "water bottle",
+            description: "color: blue size: large",
             price: 100,
             discounted_price: 99,
-        },
-        {
+          },
+          {
             id: 2,
-            name: 'mouse',
-            description: 'wired usb port',
+            name: "mouse",
+            description: "wired usb port",
             price: 250,
             discounted_price: 199,
-
-        },
-        {
+          },
+          {
             id: 3,
-            name: 'watch',
-            description: 'color:black, watch type:smart, brand:apple',
+            name: "watch",
+            description: "color: black, watch type: smart, brand: apple",
             price: 5000,
             discounted_price: 4999,
-
-        },
-        {
+          },
+          {
             id: 4,
-            name: 'infinix s23',
-            description: 'color:blue,storage: 120gb ram: 2gb display: 6x4',
+            name: "infinix s23",
+            description: "color blue, storage: 120gb ram: 2gb display: 6x4",
             price: 25000,
             discounted_price: 24999,
-
-        },
-        {
+          },
+          {
             id: 5,
-            name: 'shoes',
-            description: 'size: 8, color: blue, type: sports wear',
+            name: "shoes",
+            description: "size: 8, color blue, type: sports wear",
             price: 3000,
             discounted_price: 3000,
+          },
+        ];
 
-        },
-    ];
 
-    onMounted(() => {
-        alert("Let see");
-    });
+        onMounted(()=>{
+          alert("let see");
+        });
 
-    const computedTotalCart = computed(() => {
+        const computedTotalCart = computed(() => {
           var total = checkoutForm.value.cart_details.reduce((accumulator, currentValue) => {
             var currentPrice = currentValue.discounted_price < currentValue.price ? currentValue.discounted_price : currentValue.price
             return accumulator + currentPrice * currentValue.quantity
@@ -440,22 +396,17 @@
           return total;
         });
 
-
-
-    
-
-    const validateFields = () =>  {
-        var basicFields = [
-           "first_name",
+        const validateFields = () => {
+          var basicFields = [
+            "first_name",
             "last_name",
             "address",
             "postal_code",
           ];
-        const basicValidation = () => {
+          const basicValidation = () => {
             var checkValidation = true;
             basicFields.forEach((x) => {
-
-                if (
+              if (
                 checkoutForm.value[x] == "" ||
                 checkoutForm.value[x] == null
               ) {
@@ -467,17 +418,11 @@
             });
             return checkValidation;
           };
-               
-
-
-
-        var testBasicValidation = basicValidation();
-        if (!testBasicValidation) {
+          var testBasicValidation = basicValidation();
+          if (!testBasicValidation) {
             return false;
-
-        }
-
-        const validatePhoneNumber = (phoneNumber) => {
+          }
+          const validatePhoneNumber = (phoneNumber) => {
             const regex = /^(\+92|92|033|03)[ -]*\d{3}[ -]*\d{7}$/;
             return regex.test(phoneNumber);
           };
@@ -514,8 +459,6 @@
           }
         };
 
-    
-
         const addToCart = (product) => {
           debugger;
           var currentProduct = products.find((x) => {
@@ -544,6 +487,7 @@
           }
           document.getElementById("qty" + product).value = "";
         };
+
         function removeItemCart(id) {
           var proIndex = checkoutForm.value.cart_details.findIndex((x) => {
             return x.id == id;
@@ -571,11 +515,3 @@
     }).mount("#app");
   </script>
 </html>
-
-
-
-
-   
-
-
-   
